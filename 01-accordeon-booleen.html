@@ -4,10 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <cript defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" ></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" ></script>
     <title>Accordéon avec des booléens</title>
   </head>
   <body>
     <h1>Accordéon avec des booléens</h1>
+    <div class="accordeon">
+      <section x-data="{menuIsOpen :false}">
+        <button @click="menuIsOpen = ! menuIsOpen">bouton 1</button>
+        <p x-show="menuIsOpen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nesciunt, distinctio eum corporis amet harum tempora at qui aperiam itaque ex accusamus cupiditate ad ipsum. Ipsum sunt impedit tenetur quasi.</p>
+      </section>
+      <section x-data="{menuIsOpen :false}">
+        <button>bouton 2</button>
+        <p x-show="false">Officiis nulla, alias voluptatibus vitae fuga minus esse error quasi sit quis perspiciatis, suscipit fugiat perferendis reiciendis consequuntur possimus temporibus, nisi at nesciunt quas architecto dolorum porro molestiae. Assumenda, consequuntur?</p>
+      </section>
+      <section x-data="{menuIsOpen :false}">
+        <button>bouton 3</button>
+        <p x-show="true">Perspiciatis aliquam beatae at id quas quia sequi! Expedita laboriosam fugit quasi asperiores ipsum minima earum, enim eveniet maxime error provident quos. Error eligendi, soluta corrupti assumenda eaque beatae et.</p>
+      </section>
+    </div>
   </body>
 </html>
