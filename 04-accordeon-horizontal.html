@@ -22,7 +22,7 @@
      /* pour cacher le contenu dépassant de l'élément */
      overflow: hidden;
      /* pour l'animation, transition sur width */
-     transition-duration: 100ms;
+     transition-duration: 1000ms;
      /* couleur de fond #eee */
      background-color: #eee;
      /* pour enlever les puces */
@@ -73,7 +73,7 @@
   <body>
     <h1>Accordéon horizontal</h1>
     <ul id="accordeon" x-data="{isOpen:0}">
-      <li :class="{actif:isOpen === 1,} " @click="isOpen=1">
+      <li :class="{actif:isOpen === 1,} " @click="isOpen=(isOpen === 1)?0:1">
         <figure>
           <img src="https://www.vpnclub.fr/wp-content/uploads/2022/11/coupe-du-monde-2022.jpg" alt="Coupe du Monde Qatar" width="102">
           <figcaption>
@@ -82,7 +82,7 @@
           </figcaption>
         </figure>
       </li>
-      <li  :class="{actif:isOpen === 2,}" @click="isOpen=2">
+      <li  :class="{actif:isOpen === 2,}" @click="isOpen=(isOpen === 2)?0:2">
         <figure>
           <img src="https://besthqwallpapers.com/Uploads/24-7-2017/16753/thumb2-russia-2018-logo-football-world-championship-2018-fifa-world-cup.jpg" alt="Coupe du Monde Russie" width="102">
           <figcaption>
@@ -91,7 +91,7 @@
           </figcaption>
         </figure>
       </li>
-      <li :class="{actif:isOpen === 3,} " @click="isOpen=3">
+      <li :class="{actif:isOpen === 3,} " @click="isOpen=(isOpen ===3)?0:3">
         <figure>
           <img src="https://www.stickers-folies.fr/ori-stickers-coupe-du-monde-bresil-2014-11721.jpg" alt="Coupe du Monde Brésil" width="102">
           <figcaption>
