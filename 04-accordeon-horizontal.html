@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon horizontal</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
       #accordeon {
      /* pour que les éléments soient alignés horizontalement */
@@ -66,12 +67,13 @@
      /* pour éviter les "padding" par défaut */
      margin: 0;
 }
+
     </style>
   </head>
   <body>
     <h1>Accordéon horizontal</h1>
-    <ul id="accordeon">
-      <li>
+    <ul id="accordeon" x-data="{isOpen:0}">
+      <li :class="{actif:isOpen === 1,} " @click="isOpen=1">
         <figure>
           <img src="https://www.vpnclub.fr/wp-content/uploads/2022/11/coupe-du-monde-2022.jpg" alt="Coupe du Monde Qatar" width="102">
           <figcaption>
@@ -80,7 +82,7 @@
           </figcaption>
         </figure>
       </li>
-      <li>
+      <li  :class="{actif:isOpen === 2,}" @click="isOpen=2">
         <figure>
           <img src="https://besthqwallpapers.com/Uploads/24-7-2017/16753/thumb2-russia-2018-logo-football-world-championship-2018-fifa-world-cup.jpg" alt="Coupe du Monde Russie" width="102">
           <figcaption>
@@ -89,7 +91,7 @@
           </figcaption>
         </figure>
       </li>
-      <li>
+      <li :class="{actif:isOpen === 3,} " @click="isOpen=3">
         <figure>
           <img src="https://www.stickers-folies.fr/ori-stickers-coupe-du-monde-bresil-2014-11721.jpg" alt="Coupe du Monde Brésil" width="102">
           <figcaption>
